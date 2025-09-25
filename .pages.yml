@@ -1,0 +1,16 @@
+project:
+  name: cms-blog
+  type: astro
+
+content:
+  collections:
+    - name: blog
+      label: Blog
+      folder: src/content/blog
+      create: true
+      fields:
+        - { name: title, label: Title, widget: string }
+        - { name: description, label: Description, widget: string }
+        - { name: image, label: Image, widget: image }
+        - { name: date, label: Date, widget: datetime }
+        - { name: content, label: Content, widget: markdown }
