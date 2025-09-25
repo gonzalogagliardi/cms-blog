@@ -1,5 +1,6 @@
-name: cms-blog
-type: astro
+project:
+  name: cms-blog
+  type: astro
 
 content:
   collections:
@@ -8,8 +9,13 @@ content:
       folder: src/blog
       create: true
       fields:
-        - { name: title, label: Title, widget: string }
-        - { name: description, label: Description, widget: string }
-        - { name: image, label: Image, widget: image }
+        - { name: pageName, label: Page Name, widget: string }
+        - { name: blogTitle, label: Blog Title, widget: string }
+        - { name: titleTag, label: Title Tag, widget: string }
+        - { name: blogDescription, label: Blog Description, widget: string }
+        - { name: author, label: Author, widget: string }
         - { name: date, label: Date, widget: datetime }
-        - { name: content, label: Content, widget: markdown }
+        - { name: tags, label: Tags, widget: list }
+        - { name: image, label: Image, widget: image }
+        - { name: imageAlt, label: Image Alt Text, widget: string }
+        - { name: body, label: Body, widget: markdown }
