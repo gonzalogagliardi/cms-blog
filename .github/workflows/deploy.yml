@@ -25,5 +25,5 @@ jobs:
           server: ftp.lime-reindeer-940639.hostingersite.com
           username: u951024496.pruebacms
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist
+          local-dir: ./public/
           server-dir: /domains/lime-reindeer-940639.hostingersite.com/public_html/
