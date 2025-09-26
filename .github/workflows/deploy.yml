@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Install dependencies
@@ -19,11 +19,13 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Deploy to FTP
+      - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp.lime-reindeer-940639.hostingersite.com
+          server: 77.37.127.218
           username: u951024496.pruebacms
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public/
-          server-dir: /domains/lime-reindeer-940639.hostingersite.com/public_html/
+          port: 21
+          protocol: ftp
+          local-dir: ./public
+          server-dir: /public_html/
