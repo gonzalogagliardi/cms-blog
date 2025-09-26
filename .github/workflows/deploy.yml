@@ -22,10 +22,10 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: 77.37.127.218
-          username: u951024496.pruebacms
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
           protocol: ftp
+          port: 21
           local-dir: ./public
           server-dir: /public_html/
