@@ -22,8 +22,8 @@ jobs:
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: 77.37.127.218
+          server: ftp.lime-reindeer-940639.hostingersite.com
           username: u951024496.pruebacms
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./_site/
+          local-dir: ./public/
           server-dir: /domains/lime-reindeer-940639.hostingersite.com/public_html/
