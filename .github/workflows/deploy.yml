@@ -25,5 +25,5 @@ jobs:
           server: 77.37.127.218
           username: u951024496.pruebacms
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
+          local-dir: ./_site/
           server-dir: /domains/lime-reindeer-940639.hostingersite.com/public_html/
